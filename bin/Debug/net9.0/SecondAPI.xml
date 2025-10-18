@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SecondAPI</name>
+    </assembly>
+    <members>
+        <member name="M:SecondAPI.Controller.BooksController.GetAllBooks">
+            <summary>
+            Busca todos os livros
+            </summary>
+            <returns>Os livros criados são retornados</returns>
+            <response code="200">Retorna a lista de livros</response>
+        </member>
+        <member name="M:SecondAPI.Controller.BooksController.GetBookById(System.Int32)">
+            <summary>
+            Busca um livro pelo ID
+            </summary>
+            <param name="id">Id do livro a ser encontrado</param>
+            <returns>Encontra o livro pelo ID</returns>
+            <response code="200">Retorna o livro encontrado</response>
+            <response code="404">Se o livro não for encontrado</response>
+        </member>
+        <member name="M:SecondAPI.Controller.BooksController.CreateBook(SecondAPI.Model.Books)">
+            <summary>
+            Cria um novo livro
+            </summary>
+            <param name="newBook">Objeto livro a ser criado, vindo do corpo da requisição</param>
+            <returns>Retorna o livro a ser criado, encontrado pelo seu ID</returns>
+            <response code="201">Retorna o livro criado</response>
+            <response code="400">Se o livro for nulo</response>
+        </member>
+        <member name="M:SecondAPI.Controller.BooksController.UpdateBook(System.Int32,SecondAPI.Model.Books)">
+            <summary>
+            Atualiza um livro já existente através do ID
+            </summary>
+            <param name="id">Id do livro a ser procurado para ser atualizado</param>
+            <param name="updatedBook">Objeto do livro a ser alterado, vindo do corpo da requisição</param>
+            <response code="204">Se o livro for atualizado com sucesso</response>
+            <response code="404">Se o livro não for encontrado</response>
+        </member>
+        <member name="M:SecondAPI.Controller.BooksController.DeleteBook(System.Int32)">
+            <summary>
+            Deleta um livro existente através do ID
+            </summary>
+            <param name="id">Id do livro a ser procurado para remoção</param>
+            <response code="204">Se o livro for deletado com sucesso</response>
+            <response code="404">Se o livro não for encontrado</response>
+        </member>
+        <member name="T:SecondAPI.Migrations.bookmodeladded">
+            <inheritdoc />
+        </member>
+        <member name="M:SecondAPI.Migrations.bookmodeladded.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecondAPI.Migrations.bookmodeladded.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecondAPI.Migrations.bookmodeladded.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecondAPI.Migrations.bookdataadded">
+            <inheritdoc />
+        </member>
+        <member name="M:SecondAPI.Migrations.bookdataadded.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecondAPI.Migrations.bookdataadded.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecondAPI.Migrations.bookdataadded.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecondAPI.Migrations.model_and_data_model">
+            <inheritdoc />
+        </member>
+        <member name="M:SecondAPI.Migrations.model_and_data_model.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecondAPI.Migrations.model_and_data_model.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecondAPI.Migrations.model_and_data_model.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

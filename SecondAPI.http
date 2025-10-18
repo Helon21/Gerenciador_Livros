@@ -1,0 +1,35 @@
+@rootURL = http://localhost:5284
+
+GET {{rootURL}}/api/books
+Accept: application/json
+
+###
+
+GET {{rootURL}}/api/books/3
+Accept: application/json
+
+###
+POST {{rootURL}}/api/books
+Content-Type: application/json
+
+{
+    "title": "How to make friends and influence people",
+    "author": "Dale Carnegie",
+    "yearPublished": 1936
+}
+
+###
+
+PUT {{rootURL}}/api/books/6
+Content-Type: application/json
+
+{
+    "title": "48 Laws of Power",
+    "author": "Robert Greene",
+    "yearPublished": 1998
+}
+
+###
+
+DELETE {{rootURL}}/api/books/5
+Accept: application/json
